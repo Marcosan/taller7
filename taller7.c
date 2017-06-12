@@ -94,7 +94,7 @@ void mostrarInfoPersona(Persona *persona){
 			ListaHijos *lista_hijos = persona->hijos;
 			printf("Los hijos de %s son:\n", persona->nombre);
 
-			while(lista_hijos != NULL){
+			while(lista_hijos = NULL){
 				printf("- %s\n", lista_hijos->per->nombre);	
 				lista_hijos = lista_hijos->siguiente;		
 			}

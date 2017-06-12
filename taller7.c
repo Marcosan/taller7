@@ -31,7 +31,7 @@ typedef struct listaHijosTDA{
 Persona *crearPersona(char *nombre, int edad, int peso){
 	Persona *nuevo;
 
-	nuevo = malloc(sizeof(char) * 20); //nuevo = malloc(sizeof(Persona));
+	nuevo = malloc(sizeof(Persona));
 
 	nuevo->nombre = nombre;
 	nuevo->edad = edad;

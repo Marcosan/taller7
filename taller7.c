@@ -31,7 +31,7 @@ typedef struct listaHijosTDA{
 Persona *crearPersona(char *nombre, int edad, int peso){
 	Persona *nuevo;
 
-	nuevo = malloc(sizeof(char) * 20);
+	nuevo = malloc(sizeof(char) * 20); //nuevo = malloc(sizeof(Persona));
 
 	nuevo->nombre = nombre;
 	nuevo->edad = edad;
@@ -75,7 +75,7 @@ int anadirHijo(Persona *padre, Persona *hijo){
 			return -1;		
 		}
 		nuevo->per = hijo;
-		nuevo->siguiente = nuevo;
+		nuevo->siguiente = NULL;
 		lista_hijos->siguiente = nuevo;
 		return 0;	
 		
@@ -94,7 +94,7 @@ void mostrarInfoPersona(Persona *persona){
 			ListaHijos *lista_hijos = persona->hijos;
 			printf("Los hijos de %s son:\n", persona->nombre);
 
-			while(lista_hijos = NULL){
+			while(lista_hijos != NULL){
 				printf("- %s\n", lista_hijos->per->nombre);	
 				lista_hijos = lista_hijos->siguiente;		
 			}
